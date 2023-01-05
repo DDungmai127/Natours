@@ -1,0 +1,44 @@
+doctype html
+html 
+    head 
+        block head
+            meta(charset="UTF-8")
+            meta(name="viewport" content="width=device-width,initial-scale=1.0")
+            //- title Natours tour  như dưới ta đã nói thì đây chỉ như một text mà thôi, thì ta phải làm như này
+            //- <link rel="stylesheet" href="css/style.css">
+            link(rel='stylesheet' href='/css/style.css')
+            link(rel='shortcut icon' type='/image/png' href='/img/favicon.png')
+            link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato:300,300i,700')       
+            title Natours | #{title}
+
+    
+        //- Một số thứ ban đầu 
+        //- h1= tour 
+        //- h2= user.toUpperCase()
+        //- p this is just some text
+
+        //- - const x = 9
+        //- h2= 2 * x 
+
+        //- interpolation
+        //- Giải thích như này, thầy jonas bảo nó như template string trong js , bởi vì đặc điểm của pug là sau dấu ' = ' thì nó sẽ coi đó là một biểu thức javascript còn không thì nó sẽ chỉ là một text mà thôi. Cái biểu thức ở phần title đấy, ta sẽ thấy nó có phần nào tương tự với template string
+        //- À thêm nữa là viết một dấu trừ ' - ' tương ứng theo sau sẽ là code JS nhé, việc ta comment này nó cx có thêm những dấu - ở trước để thể hiện điều đó
+
+    body 
+        
+        //HEader
+        include _header
+
+        //- CONTENT 
+        block content 
+            h1 This is a placeholder heading
+
+        //-FOOTER
+        include _footer
+        
+        //- script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js')
+        //- script(src='/js/mapbox.js')
+        //- script(src='/js/login.js')
+        script(src='/js/bundle.js')
+        script(src="https://js.stripe.com/v3/") 
+
